@@ -1,43 +1,193 @@
 <!DOCTYPE html>	
-<html lang = "en">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>
-		Welcome To Garena
-	</title>
-</head>	
-<body background="2222.jpg">
-	<br />
-	<h3 align="center">
-		<font face="Lato" color = "red" size="6">DATTEBAYO(Garena)</font>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;
-		<font face="cinzel" size="4">
-			<a href="https://www.garena.vn/">Trang Chủ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://fo4.garena.vn/">Game</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://sso.garena.com/ui/register?redirect_uri=https%3A%2F%2Fsso.garena.com%2Fui%2Flogin%3Fapp_id%3D10100%26redirect_uri%3Dhttps%253A%252F%252Faccount.garena.com%252F%253Flocale_name%253DVN%26locale%3Dvi-VN&locale=vi-VN">Đăng ký</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://hotro.garena.vn/">Hỗ trợ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://sso.garena.com/ui/login?app_id=10100&redirect_uri=https%3A%2F%2Faccount.garena.com%2F%3Flocale_name%3DVN&locale=vi-VN">Đăng nhập</a>&nbsp;&nbsp;&nbsp;&nbsp;
-	</h3>
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<h1 align="center">
-		<font face="Lato" color="powderblue" size="7">
-			Chúc mừng bạn đã vào Garena
-		</font>
-	</h1>
-	<h3 align="center">
-		<font face="Lato" color="powderblue" size="5">
-			Bạn có thể đăng ký tài khoản Garena ở đây mà không cần lên Google
-		</font>
-	</h3>
-	<br />
-	<h3 align="center">
-	<a href="https://github.com/TranNgocA-n">
-		<font face="Lato" color="red">Follow(I need)</font>
-	</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://github.com/TranNgocA-n">
-		<font face="Lato" color="black">Like(I need too)</font>
-	</a>
-	</h3>
+	<title>Nothing</title>
+	<link rel="icon" href="picture/hinhanh1.png">
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&family=Merriweather:ital,wght@1,400;1,700&family=Roboto+Condensed&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script:wght@700&family=Kaushan+Script&family=Signika:wght@600&family=Tapestry&display=swap');
+@keyframes an-pupils {
+    from {
+        left: 60px;
+    }
+    to {
+        left: 0px;
+    }
+}
+@keyframes an-ears {
+    from {
+       top:0;
+    }
+    to {
+       top:25px;
+    }
+}
+body {
+	font-family: "Roboto Mono", monospace;
+  	background-color:#d2d2d1;
+	font-size: 18px;
+    padding: 1em;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 5vw;
+    margin: 0;
+}
+h1,p {
+    margin: auto;
+    font-family: 'Tapestry';
+}
+#cat {
+	width: 480px;
+	margin:20px auto;
+  
+}
+#head {
+	width: 400px;
+	height: 370px;
+	background-color: #171717;
+	border-radius: 50%;
+	margin: auto;
+}
+#ears {
+ height: 65px;
+ position: relative;
+ left: 35px;
+ animation-name: an-ears;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.ear{
+	width: 0; 
+	height: 0; 
+	border-left: 90px solid transparent;  
+	border-right: 90px solid transparent; 
+	border-bottom: 160px solid #171717; 
+	font-size: 0;
+	line-height: 0;
+	float: left;
+	margin-right: 60px;
+	-ms-transform: rotate(35deg); 
+    -webkit-transform: rotate(35deg); 
+    transform: rotate(35deg);
+}
+.ear:first-child {
+	-ms-transform: rotate(-35deg); 
+    -webkit-transform: rotate(-35deg); 
+    transform: rotate(-35deg);
+}
+#eyes {
+	clear: both;
+	width: 350px;
+	position: relative;
+	top: 25px;
+	left: 53px;
+}
+.eye {
+	width: 120px;
+	height: 120px;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	float: left;
+}
+.eye:first-child {
+	margin-right: 50px;
+}
+.pupil {
+	position: relative;
+	top:40px;
+	background-color: #000000;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	animation-name: an-pupils;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+}
+.pupil_ref {
+	background-color: #FFFFFF;
+	border-radius: 45%;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top: 40px;
+	left: 10px;
+
+}
+#nose {
+	width: 45px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	position: relative;
+	top: 160px;
+	left: 170px;
+}
+#baffi_sx {
+position: relative;
+left: -100px;
+top: 85px;
+-ms-transform: rotate(10deg); 
+    -webkit-transform: rotate(10deg); 
+    transform: rotate(10deg);
+}
+#baffi_dx {
+position: relative;
+left: 223px;
+top: 96px;
+-ms-transform: rotate(-10deg); 
+    -webkit-transform: rotate(-10deg); 
+    transform: rotate(-10deg);
+}
+.baffo{
+  width:260px; 
+  height:5px;  
+  border:solid 3px #000;
+  border-color:#000 transparent transparent transparent;
+  border-radius: 60%/30px 30px 0 0;
+}
+</style>
+<body>
+	<div id="cat">
+		<div id="ears">
+			<div class="ear"></div>
+			<div class="ear"></div>
+		</div>
+		<div id="head">
+			<div id="eyes">
+				<div class="eye">
+					<div class="pupil">
+					<div class="pupil_ref"></div>
+					</div>
+				</div>
+			<div class="eye">
+				<div class="pupil">
+				<div class="pupil_ref"></div>
+				</div>
+			</div>
+			</div>
+			<div id="nose"></div>
+			<div id="baffi_dx">
+				<div class="baffo"></div>
+				<div class="baffo"></div>
+				<div class="baffo"></div>
+			</div>
+			<div id="baffi_sx">
+				<div class="baffo"></div>
+				<div class="baffo"></div>
+				<div class="baffo"></div>
+			</div>
+		</div>
+	</div>
+		<div class="flex-container">
+			<div class="message-container">
+				<h1><b>Tới đây là hết rồi!</b></h1>
+				<p>Chờ mình có ý tưởng thì mình update sau ♥</p>
+			</div>
+		</div>
 </body>
 </html>
