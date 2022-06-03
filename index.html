@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" href="picture/hinhanh.png">
   <title>HTML and CSS</title>
   <style>
 :root {
@@ -20,6 +22,64 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
+  width: 100%;
+  height: 100px;
+}
+.search-box input{
+  border-radius: 30px;
+  color: #000;
+  border: 1px solid #0ecff1;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search-box input{
+  border-radius: 30px;
+  color: #000;
+  border: 1px solid #0000007d;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search-box{
+  width: 500px;
+  margin: 30px auto;
+}
+.search-box .example{
+  width: 500px;
+  height: 50px;
+  position: relative;
+
+}
+.search-box .example input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 84%;
+  height: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.search-box .example button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  border-radius: 0 30px 30px 0;
+  background: wheat;
+  font-size: 20px;
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid wheat;
+  color: #fff;
+  border-left: none;
+}
+.search-box .example button:hover{
+  color: #000;
+  transition: 0.6s ease;
+  background: greenyellow;
+  border: none;
 }
 .container {
   max-width: 960px;
@@ -187,9 +247,23 @@ body {
   text-decoration: none;
   transition: color 0.4s ease;
 }
+footer {
+  background-color: rgba(13, 110, 139, 0.75);
+  height: 50px;
+}
   </style>
 </head>
 <body>
+  <footer>
+      <div class="banner">
+          <div class="search-box">
+              <form class="example" action="" >
+                  <input type="search" placeholder="Search...." required>
+                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+          </div>
+      </div>
+  </footer>
   <div class="menu-wrap">
     <input type="checkbox" class="toggler">
     <div class="hamburger"><div></div></div>
@@ -206,14 +280,12 @@ body {
       </div>
     </div>
   </div>
-
   <header class="showcase">
     <div class="container showcase-inner">
-      <h1>Welcome to HTML</b></h1>
+      <h1><b>Welcome to HTML</b></h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores sint impedit delectus quam molestiae explicabo cum facere ratione veritatis.</p>
       <a href="#" class="btn">Read More</a>
     </div>
   </header>
 </body>
 </html>
-
