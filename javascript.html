@@ -1,1 +1,47 @@
-
+<!DOCTYPE html>
+ <html>
+<head>
+<style>
+     #demo{color:black;background:wheat;height:250px;width: 100%;font-size: 25px;} 
+     button{background:rgb(36, 165, 182);}
+  h1{
+    width: 150px;
+    height: 50px;
+    margin:0 auto;
+  }
+  body{
+    background-color: papayawhip;
+  }
+ </style>
+        </head>
+        <body>
+         <h1>Tính tổng</h1>
+         <p id="demo"></p>
+         <button type="button" onclick="hienthi()">Hiển thị</button>            
+        <button type="button" onclick="tongn()">Tổng 1->10</button>  
+        <button type="button" onclick="tongchan()">Tổng chẵn 1->10</button>  
+       <script>
+           function hienthi() {
+             document.getElementById("demo").innerHTML = "Chào";
+           }
+          function tongn() {
+ //Hiển thị tổng 1 -> 10
+            let text = 0;
+            for(let i  = 1; i <= 10; i++ ){
+              text += i;
+            }
+             document.getElementById("demo").innerHTML = text;
+           }
+         function tongchan() {
+ //Hiển thị tổng chẵn 1->10
+          let text = 0;
+          for(let i  = 1; i <= 10; i++ ){
+            if(i%2==0){
+              text += i;
+            }
+          }
+             document.getElementById("demo").innerHTML = text;
+           }
+         </script>       
+  </body>
+ </html>
