@@ -1,0 +1,183 @@
+<html>
+<head>
+  <title>Tạo bảng</title>
+  <meta charset="utf-8">
+  <style>
+    #form1 {
+      width: 400px;
+      margin: auto;
+      padding: 10px 40px;
+      background: whitesmoke;
+      border: 1px solid black;
+    }
+    #form1 .txt {
+      width: 400px;
+      padding: 6px;
+      border: solid 1px lightslategray;
+    }
+    #form1 fieldset {
+      border: solid 1px lightslategray;
+      margin-top: 0;
+    }
+    #form1 #chapnhan {
+      width: 100px;
+      height: 40px;
+      border: none;
+      background-color:royalblue ;
+      color: white;
+    }
+    #form1 #huy {
+      width: 100px;
+      height: 40px;
+      border: none;
+      background-color:royalblue ;
+      color: white;
+    }
+    #form1 #baoloi {
+      margin: 0px auto;
+      color: red;
+    }
+    #form1 .loi {
+      width:  400px;
+      padding: 6px;
+      border: 1px solid red;
+      background-color:yellow; 
+    }
+    #noidung {
+      background: blue;
+      height:250px;
+      width:100%;
+      color:yellow;
+      font-size:25px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <form id="form1">
+    <h2>Form khai báo</h2>
+    <p>
+      <label>Họ và tên</label><br>
+      <input id="hoten" type="loi" class="txt">
+    </p>
+    <p>
+      <label>Email</label><br>
+      <input id="email" type="email" class="txt">
+    </p>
+    <p>
+      <fieldset id="fs1">
+        <legend>Giới tính</legend>
+        <input type="checkbox" name="gioitinh" value="Nam">
+        <label>Nam</label>
+        <input type="checkbox" name="gioitinh" value="Nữ">
+        <label>Nữ</label>
+      </fieldset>
+    </p>
+    <p>
+      <label>Quốc tịch</label>
+      <select id="quoctich" class="txt">
+        <option value="0">Chọn quốc tịch</option>
+        <option value="1">Việt Nam</option>
+        <option value="2">Nhật</option>
+        <option value="3">Hàn</option>
+        <option value="4">Mỹ</option>
+        <option value="5">Nga</option>
+      </select>
+    </p>
+    <p>
+      <fieldset id="fs2">
+        <legend>Sở thích</legend>
+        <input type="checkbox" name="st"><label>Lập trình</label>
+        <input type="checkbox" name="st"><label>Du lịch</label>
+        <input type="checkbox" name="st"><label>Game</label>
+        <input type="checkbox" name="st"><label>Bóng đá</label>
+        <input type="checkbox" name="st"><label>Khác</label>
+      </fieldset>
+    </p>
+    <div id="baoloi"></div>
+    <button type="button" onclick="return kiemtra();" id="chapnhan">Chấp nhận</button>
+    <button type="button" id="huy">Hủy</button>
+  </form>
+  <div><p id="noidung"></p></div>
+    <button type="button" onclick="hoten()">Tên</button>            
+    <button type="button" onclick="email()">Email</button>            
+    <button type="button" onclick="gioitinh()">Giới tính</button>  
+    <button type="button" onclick="quoctich()">Quốc tịch</button>
+    <button type="button" onclick="st()">Sở thích</button>
+  <script>
+    function kiemtra() {
+      var loi="";
+      //kiểm tra Họ và tên
+      var hoten = document.getElementById("hoten");
+      if(hoten.value==""){
+        hoten.className="loi";
+        loi += "Họ và tên không được bỏ trống.<br>";
+      }
+      else if(hoten.value.length>30){
+        hoten.className="loi";
+        loi += "Họ tên quá dài.<br>";
+      }
+      else hoten.className="txt";
+      //kiểm tra email
+      var email = document.getElementById("email");
+      if(email.value==""){
+        email.className="loi";
+        loi += "Email không được bỏ trống.<br>";
+      }
+      else email.className="txt";
+      //kiểm tra giới tính
+      dem = 0;
+      var arr_gioitinh = document.getElementsByName("gioitinh");
+      for(var i = 0; i<arr_gioitinh.length; i++){
+        if(arr_gioitinh[i].checked == true) dem++;
+      }
+      if(dem==0){
+        document.getElementById("fs1").className="loi";
+        loi += "Chọn giới tính.<br>";
+      }
+      else document.getElementById("fs1").className="";
+      //kiểm tra quốc tịch
+      var qt = document.getElementById("quoctich");
+      if(qt.value==0){
+        qt.className="loi";
+        loi += "Phải chọn quốc tịch.<br>";
+      }
+      else qt.className="txt"
+      //kiểm tra sở thích
+      arr_sothich = document.getElementsByName("st");
+      dem = 0;
+      for(var i=0;i<arr_sothich.length; i++){
+        if(arr_sothich[i].checked) dem++;
+      }
+      if(dem==0){
+        document.getElementById("fs2").className="loi";
+        loi += "Phải chọn 1 sở thích";
+      }
+      else document.getElementById("fs2").className=""
+      //trả về giá trị kiểm tra
+      if(loi!=""){
+        document.getElementById('baoloi').innerHTML=loi;
+        return false;
+      }
+    }
+    function hoten() {
+document.getElementById("noidung").innerHTML ="Họ và tên : " + document.forms["form1"].hoten.value;
+}
+    function email() {
+             
+document.getElementById("noidung").innerHTML ="Email : " + document.forms["form1"].email.value ;
+}
+    function gioitinh() {
+              
+document.getElementById("noidung").innerHTML ="Giới tính : " + document.forms["form1"].gioitinh.value;
+}
+    function quoctich() {          
+document.getElementById("noidung").innerHTML ="Quốc tịch : " + document.forms["form1"].quoctich.value ;
+}
+    function st() {         
+document.getElementById("noidung").innerHTML ="Sở thích : " + document.forms["form1"].st.value;
+}
+  </script>
+</body>
+</html>
