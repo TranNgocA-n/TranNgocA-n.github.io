@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="icon" href="picture/hinhanh1.png">
-  <title>HTML and CSS</title>
+  <title>Dự án</title>
   <style>
 :root {
   --primary-color: rgba(13, 110, 139, 0.75);
@@ -18,68 +18,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  ;
 }
 body {
   font-family: 'Roboto', sans-serif;  
   line-height: 1.4;
   width: 100%;
   height: 100px;
-}
-.search-box input{
-  border-radius: 30px;
-  color: #000;
-  border: 1px solid #0ecff1;
-  border-right: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.search-box input{
-  border-radius: 30px;
-  color: #000;
-  border: 1px solid #0000007d;
-  border-right: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.search-box{
-  width: 500px;
-  margin: 30px auto;
-}
-.search-box .example{
-  width: 500px;
-  height: 50px;
-  position: relative;
-
-}
-.search-box .example input{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 84%;
-  height: 100%;
-  padding: 10px 20px;
-  font-size: 18px;
-}
-.search-box .example button{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 100%;
-  border-radius: 0 30px 30px 0;
-  background: wheat;
-  font-size: 20px;
-  z-index: 1;
-  cursor: pointer;
-  border: 1px solid wheat;
-  color: #fff;
-  border-left: none;
-}
-.search-box .example button:hover{
-  color: #000;
-  transition: 0.6s ease;
-  background: greenyellow;
-  border: none;
 }
 .container {
   max-width: 960px;
@@ -112,7 +57,7 @@ body {
   height: 100%;
 }
 .showcase h1 {
-  font-size: 4rem;
+  font-size: 50px;
 }
 .showcase p {
   font-size: 1.3rem;
@@ -247,23 +192,12 @@ body {
   text-decoration: none;
   transition: color 0.4s ease;
 }
-footer {
-  background-color: rgba(13, 110, 139, 0.75);
-  height: 50px;
+.textcenter {
+  text-align: center;
 }
   </style>
 </head>
 <body>
-  <footer>
-      <div class="banner">
-          <div class="search-box">
-              <form class="example" action="Trang_chu_game.html" >
-                  <input type="search" placeholder="Search...." required>
-                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-              </form>
-          </div>
-      </div>
-  </footer>
   <div class="menu-wrap">
     <input type="checkbox" class="toggler">
     <div class="hamburger"><div></div></div>
@@ -274,7 +208,7 @@ footer {
             <li><a href="index.html"><b>Trang chủ</b></a></li>
             <li><a href="gioi-thieu.html"><b>Giới thiệu</b></a></li>
             <li><a href="https://tranngoca-n.github.io/lienhe.html"><b>Liên hệ</b></a></li>
-            <li><a href="#"><b>Coming soon</b></a></li>
+            <li><a href="#"><b>Sắp ra mắt</b></a></li>
           </ul>
         </div>
       </div>
@@ -282,10 +216,15 @@ footer {
   </div>
   <header class="showcase">
     <div class="container showcase-inner">
-      <h1><b>Welcome to my project</b></h1>
-      <p>We are here to serve you - Chúng tôi ở đây để phục vụ bạn.</p>
+      <h1><b>Chào mừng bạn đến với dự án của tôi</b></h1>
+      <p>Hài lòng của bạn là đam mê của chúng tôi.</p>
       <a href="Trang_chu_game.html" class="btn">Xem thêm</a>
     </div>
   </header>
+  <footer>
+    <div class="row"></div>
+    <div class="row textcenter">@Bản quyền của Trần Ngọc Ân
+    </div>
+  </footer>
 </body>
 </html>
