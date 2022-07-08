@@ -110,7 +110,7 @@
       </p>
     <div id="baoloi"></div>
     <button type="button" onclick="return kiemtra();" id="chapnhan">Chấp nhận</button>
-    <button type="button" id="huy">Hủy</button>
+    <button type="button" onclick="cancel()" id="huy">Hủy</button>
       </form>
     <div id="phai">
       <p id="hotenr">Tên:</p><br>
@@ -134,6 +134,9 @@
       document.getElementById("sothichr").innerHTML="Sở thích: " + sothich;
     }
     document.getElementById("chapnhan").onclick=function(){hienra()};
+    function cancel() {
+  			document.getElementById("form1").reset();
+		}
   </script>
 </body>
 </html>
