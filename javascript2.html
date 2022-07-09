@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
+       <head>
+        <title>Tính tổng n</title>
+<style>
+body{
+  background-size: 100%;
+  text-align: center;
+}
+h1{
+  text-align: center;
+  color: black;
+}
+#noidung{
+	background: green;
+    height:250px;
+    width:100%;
+    color:yellow;
+    font-size:25px;
+    text-aign: center;
+    border-radius: 20px;
+}
+#myForm{
+  
+  font-size:25px;
+}
 
+    button{
+    	background:#CDC1B6;
+        margin-left:10px;
+        border-radius:10px ;
+        height: 45px;
+        border: 2px dashed black;
+
+}
+</style>
+       </head>
+       <body>
+        <h1>Tính tổng n</h1>
+      <form id="myForm" action="">
+         <p>Vui lòng nhập tên: <input id="textbox1" name="textname" type="text" /></p>
+         <p>Nhập n =  <input id="textbox2" name="n" type="text" /></p>
+       </form>
+        <p id="noidung"></p>
+        <button type="button" onclick="hienthi()">Hiển thị </button>            
+       <button type="button" onclick="tinhtong()">Tính tổng</button>            
+      <button type="button" onclick="tinhtongchan()">Tính tổng chẵn</button>  
+        <script>
+          function hienthi() {
+            document.getElementById("noidung").innerHTML = "Xin chào. Tôi là " + document.forms["myForm"].textname.value;
+          }
+         function tinhtong() {
+              //Tính tổng từ 1 -> n
+              let text =0;
+              for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
+                   text +=i;
+              }
+document.getElementById("noidung").innerHTML ="Tổng từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
+          }
+        function tinhtongchan() {
+              //Tính tổng các số chẳn từ 1 -> n
+              let text =0;
+              for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
+                if(i%2==0){
+                   text +=i;
+              }
+            }
+              
+document.getElementById("noidung").innerHTML ="Tổng các số chẵn từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
+          }
+        </script>    
+     </body>
+</html>
