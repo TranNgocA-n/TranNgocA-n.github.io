@@ -1,0 +1,96 @@
+<html>
+<head>
+  <title>Bảng tính toán</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color:lightblue ;
+    }
+    #form1 {
+      width: 400px;
+      margin: auto;
+      padding: 10px 40px;
+      background: whitesmoke;
+      border: 1px solid black;
+      float: left;
+    }
+    #phai {
+      width: 400px;
+      margin: auto;
+      padding: 15px 10px;
+      background: whitesmoke;
+      border: 1px solid black;
+      float: left;
+    }
+    #form1 .txt {
+      width: 400px;
+      padding: 6px;
+      border: solid 1px lightslategray;
+    }
+  
+    #form1 #chapnhan {
+      width: 100px;
+      height: 40px;
+      border: none;
+      background-color:royalblue ;
+      color: white;
+    }
+    #form1 #huy {
+      width: 100px;
+      height: 40px;
+      border: none;
+      background-color:red ;
+      color: white;
+    } 
+    form#form1 {
+      background: #CCFFFF		;
+    }
+    div#phai {
+      background:#EEEEEE	 ;
+    }
+  </style>
+</head>
+<body>
+      <form id="form1">
+        <p>
+          <label>Số thứ nhất</label><br>
+          <input type="text" id="sothunhat" class="txt">
+        </p>
+        <p>
+          <label for="email">Số thứ hai</label><br>
+          <input type="text" id="sothuhai" class="txt">
+        </p>
+        <p>
+          <ieldfset>
+            <legend>Chọn phép tính</legend>
+            <input type="radio" id="pheptinh"value="Cộng">
+            <label for="pt">+</label><br>
+            <input type="radio" id="pheptinh" value="Trừ">
+            <label for="pt">-</label><br>
+            <input type="radio" id="pheptinh" value="Nhân">
+            <label for="pt">*</label><br>
+            <input type="radio" id="pheptinh" value="Chia">
+            <label for="pt">/</label><br>
+          </ieldfset>
+        </p>
+    <button onclick="return hienra()" id="chapnhan">Kết quả</button>
+    <button type="button" onclick="cancel()" id="huy">Hủy</button>
+      </form>
+    <div id="phai">
+        <p id="result"></p>
+        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function hienra() {
+
+}
+    function cancel() {
+  			document.getElementById("form1").reset();
+		}
+  
+  </script>
+</body>
+</html>
